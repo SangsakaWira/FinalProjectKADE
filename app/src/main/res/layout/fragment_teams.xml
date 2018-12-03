@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content"
+              android:id="@+id/teams_search_match"
+              android:text="@string/search"/>
+
+    <Spinner  android:layout_width="match_parent"
+              android:spinnerMode="dropdown"
+              android:id="@+id/teams_spinner_last_match"
+              android:layout_below="@id/teams_search_match"
+              android:layout_height="wrap_content">
+
+    </Spinner>
+
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_matches"
+            android:layout_below="@+id/teams_spinner_last_match"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+            android:id="@+id/clp_matches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/Base.Widget.AppCompat.ProgressBar"/>
+
+    <TextView
+            android:id="@+id/tv_matches_placeholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/matches_not_found"
+            android:layout_centerInParent="true"/>
+
+</RelativeLayout>
